@@ -108,13 +108,6 @@ npx expo start
   * Press `i` for iOS Simulator.
   * Scan QR code for physical device.
 
-### 4\. Demo Login Credentials
-
-| Role | Email | Password |
-| :--- | :--- | :--- |
-| **Admin** | `admin@example.com` | `admin123` |
-| **User** | `user1@example.com` | `user123` |
-
 -----
 
 ## 🔄 Ticket Lifecycle Flow
