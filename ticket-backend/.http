@@ -1,0 +1,55 @@
+### POST login request
+POST http://localhost:4000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "u1@mail.com",
+    "password": "qwerty"
+}
+
+### POST register admin
+POST http://localhost:4000/api/auth/register
+Content-Type: application/json
+
+{
+    "email": "admin@mail.com",
+    "password": "qwerty",
+    "role": "admin"
+}
+
+### POST register user
+POST http://localhost:4000/api/auth/register
+Content-Type: application/json
+
+{
+    "email": "u2@mail.com",
+    "password": "qwerty",
+    "role": "user"
+}
+
+### POST admin create ticket
+POST http://localhost:4000/api/tickets
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiZjQyZmI4YS05ZTgwLTQxMDMtYmUyZS03MWQzZmI5OGUwYWYiLCJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjU0MzYzNTMsImV4cCI6MTc2NTQzOTk1M30.OulTWidC8pQinz1CqxKhuuRJBwIHo5MOLI3aQdHsQPk
+
+{
+    "title": "Fix login bug",
+    "description": "Users cannot login with email",
+    "deadline": "2024-12-31T23:59:59Z",
+    "assignedUserIds": ["4b891920-d316-4ac1-8255-8c81745356ab", "6ba7b810-9dad-11d1-80b4-00c04fd430c8"]
+}
+
+### GET request
+GET http://localhost:4000/api/tickets
+
+### GET request by ID
+GET http://localhost:4000/api/tickets/1
+
+### PATCH request
+PATCH http://localhost:4000/api/tickets/1
+Content-Type: application/json
+
+{
+    "status": "in-progress",
+    "assignee": "john.doe@example.com"
+}
