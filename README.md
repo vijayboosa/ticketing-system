@@ -178,8 +178,6 @@ sequenceDiagram
 
 [Click here to watch the demo video](./app_demo.mp4)
 
-*(Replace this link with your actual video file or YouTube link)*
-
 -----
 
 ## 🧪 Postman Collection
