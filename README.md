@@ -110,36 +110,6 @@ npx expo start
 
 -----
 
-## 🔄 Ticket Lifecycle Flow
-
-```mermaid
-sequenceDiagram
-    participant Admin
-    participant Server
-    participant DB
-    participant User
-
-    Note over Admin, User: Ticket Creation
-    Admin->>Server: POST /tickets (Assign to User)
-    Server->>DB: INSERT Ticket
-    DB-->>Server: Success
-    Server-->>Admin: Ticket Created
-
-    Note over Admin, User: User Workflow
-    User->>Server: GET /tickets/my
-    Server->>DB: SELECT * WHERE assignedTo = User
-    DB-->>Server: Return Tickets
-    Server-->>User: JSON List
-    
-    User->>User: Drag card to "Completed"
-    User->>Server: PATCH /tickets/:id/status (COMPLETED)
-    Server->>DB: UPDATE status
-    DB-->>Server: Success
-    Server-->>User: Status Updated
-```
-
------
-
 ## ✅ Core Features
 
 ### 🛡 Admin
@@ -181,6 +151,3 @@ A Postman collection is included in the repo for easy API testing.
 2.  Run the **Login** request first to auto-set your environment token.
 
 <!-- end list -->
-
-```
-```
